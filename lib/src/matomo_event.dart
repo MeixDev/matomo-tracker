@@ -16,6 +16,7 @@ class MatomoEvent {
     this.eventName,
     this.eventValue,
     String? screenId,
+    this.newVisit,
     this.goalId,
     this.orderId,
     this.traOrderItems,
@@ -85,6 +86,9 @@ class MatomoEvent {
   final num? taxAmount;
   final num? shippingCost;
   final num? discountAmount;
+
+  // Is this event from a new visit?
+  final int? newVisit;
 
   /// The current time.
   final DateTime _date;
@@ -181,6 +185,8 @@ class MatomoEvent {
       if (searchCount != null) 'search_count': searchCount!.toString(),
 
       if (link != null) 'link': link!,
+
+      if (newVisit != null) 'new_visit': newVisit.toString(),
 
       // Other parameters (require authentication via `token_auth`)
       'cdt': _date.toIso8601String(),

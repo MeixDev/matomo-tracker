@@ -394,6 +394,7 @@ class MatomoTracker {
     String? eventName,
     int? eventValue,
     Map<String, String>? dimensions,
+    bool? newVisit,
   }) {
     return _track(
       MatomoEvent(
@@ -404,6 +405,11 @@ class MatomoTracker {
         eventCategory: eventCategory,
         eventValue: eventValue,
         dimensions: dimensions,
+        newVisit: newVisit != null
+            ? (newVisit == true)
+                ? 1
+                : 0
+            : null,
       ),
     );
   }
