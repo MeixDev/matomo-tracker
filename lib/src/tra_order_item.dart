@@ -1,5 +1,5 @@
-class TrackingOrderItem {
-  TrackingOrderItem({
+class TraOrderItem {
+  TraOrderItem({
     this.sku,
     this.name,
     this.category,

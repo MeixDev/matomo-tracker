@@ -6,14 +6,14 @@ import 'package:matomo_tracker/src/matomo.dart';
 import 'package:matomo_tracker/src/matomo_event.dart';
 import 'package:matomo_tracker/src/platform_info/platform_info.dart';
 import 'package:matomo_tracker/src/session.dart';
-import 'package:matomo_tracker/src/tracking_order_item.dart';
+import 'package:matomo_tracker/src/tra_order_item.dart';
 import 'package:matomo_tracker/src/visitor.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 class MockMatomoTracker extends Mock implements MatomoTracker {}
 
-class MockTrackingOrderItem extends Mock implements TrackingOrderItem {}
+class MockTrackingOrderItem extends Mock implements TraOrderItem {}
 
 class MockHttpClient extends Mock implements http.Client {}
 
@@ -60,7 +60,7 @@ class MockWidget extends StatelessWidget {
 }
 
 final mockMatomoTracker = MockMatomoTracker();
-final mockTrackingOrderItem = MockTrackingOrderItem();
+final mockTraOrderItem = MockTrackingOrderItem();
 final mockHttpClient = MockHttpClient();
 final mockMatomoEvent = MockMatomoEvent();
 final mockHttpResponse = MockHttpResponse();

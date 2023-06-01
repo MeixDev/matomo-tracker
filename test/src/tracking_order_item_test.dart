@@ -4,37 +4,36 @@ import 'package:matomo_tracker/matomo_tracker.dart';
 import '../ressources/mock/data.dart';
 
 void main() {
-  TrackingOrderItem getTrackingOrderItem() {
-    return TrackingOrderItem(
-      sku: trackingOrderItemSku,
-      name: trackingOrderItemName,
-      category: trackingOrderItemCategory,
-      price: trackingOrderItemPrice,
-      quantity: trackingOrderItemQuantity,
+  TraOrderItem getTraOrderItem() {
+    return TraOrderItem(
+      sku: traOrderItemSku,
+      name: traOrderItemName,
+      category: traOrderItemCategory,
+      price: traOrderItemPrice,
+      quantity: traOrderItemQuantity,
     );
   }
 
-  test('it should be able to create TrackingOrderItem', () async {
-    final trackingOrderItem = getTrackingOrderItem();
+  test('it should be able to create TraOrderItem', () async {
+    final traOrderItem = getTraOrderItem();
 
-    expect(trackingOrderItem.sku, trackingOrderItemSku);
-    expect(trackingOrderItem.name, trackingOrderItemName);
-    expect(trackingOrderItem.category, trackingOrderItemCategory);
-    expect(trackingOrderItem.price, trackingOrderItemPrice);
-    expect(trackingOrderItem.quantity, trackingOrderItemQuantity);
+    expect(traOrderItem.sku, traOrderItemSku);
+    expect(traOrderItem.name, traOrderItemName);
+    expect(traOrderItem.category, traOrderItemCategory);
+    expect(traOrderItem.price, traOrderItemPrice);
+    expect(traOrderItem.quantity, traOrderItemQuantity);
   });
 
-  test('it should be able to get TrackingOrderItem attribute in an array',
-      () async {
-    final trackingOrderItem = getTrackingOrderItem();
-    final trackingOrderItemArray = trackingOrderItem.toArray();
+  test('it should be able to get TraOrderItem attribute in an array', () async {
+    final traOrderItem = getTraOrderItem();
+    final traOrderItemArray = traOrderItem.toArray();
 
-    expect(trackingOrderItemArray, [
-      trackingOrderItemSku,
-      trackingOrderItemName,
-      trackingOrderItemCategory,
-      trackingOrderItemPrice,
-      trackingOrderItemQuantity,
+    expect(traOrderItemArray, [
+      traOrderItemSku,
+      traOrderItemName,
+      traOrderItemCategory,
+      traOrderItemPrice,
+      traOrderItemQuantity,
     ]);
   });
 }

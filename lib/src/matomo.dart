@@ -16,7 +16,7 @@ import 'package:matomo_tracker/src/matomo_dispatcher.dart';
 import 'package:matomo_tracker/src/matomo_event.dart';
 import 'package:matomo_tracker/src/platform_info/platform_info.dart';
 import 'package:matomo_tracker/src/session.dart';
-import 'package:matomo_tracker/src/tracking_order_item.dart';
+import 'package:matomo_tracker/src/tra_order_item.dart';
 import 'package:matomo_tracker/src/visitor.dart';
 import 'package:matomo_tracker/utils/lock.dart' as sync;
 import 'package:matomo_tracker/utils/random_alpha_numeric.dart';
@@ -435,7 +435,7 @@ class MatomoTracker {
   }
 
   void trackCartUpdate(
-    List<TrackingOrderItem>? trackingOrderItems,
+    List<TraOrderItem>? traOrderItems,
     num? subTotal,
     num? taxAmount,
     num? shippingCost,
@@ -448,7 +448,7 @@ class MatomoTracker {
       MatomoEvent(
         tracker: this,
         goalId: 0,
-        trackingOrderItems: trackingOrderItems,
+        traOrderItems: traOrderItems,
         subTotal: subTotal,
         taxAmount: taxAmount,
         shippingCost: shippingCost,
@@ -460,7 +460,7 @@ class MatomoTracker {
 
   void trackOrder(
     String? orderId,
-    List<TrackingOrderItem>? trackingOrderItems,
+    List<TraOrderItem>? traOrderItems,
     num? revenue,
     num? subTotal,
     num? taxAmount,
@@ -475,7 +475,7 @@ class MatomoTracker {
         tracker: this,
         goalId: 0,
         orderId: orderId,
-        trackingOrderItems: trackingOrderItems,
+        traOrderItems: traOrderItems,
         revenue: revenue,
         subTotal: subTotal,
         taxAmount: taxAmount,

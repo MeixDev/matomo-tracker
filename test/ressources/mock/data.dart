@@ -13,12 +13,12 @@ const forceId = '1234567890123456'; // 16 characters
 const wrongForceId = '1234';
 const userId = 'userId';
 
-// TrackingOrderItem
-const trackingOrderItemSku = 'skusku';
-const trackingOrderItemName = 'name';
-const trackingOrderItemCategory = 'category';
-const trackingOrderItemPrice = 1.0;
-const trackingOrderItemQuantity = 1;
+// TraOrderItem
+const traOrderItemSku = 'skusku';
+const traOrderItemName = 'name';
+const traOrderItemCategory = 'category';
+const traOrderItemPrice = 1.0;
+const traOrderItemQuantity = 1;
 
 // MatomoEvent
 const matomoEventPath = 'path';
@@ -40,7 +40,7 @@ const matomoSearchKeyword = 'searchKeyword';
 const matomoShippingCost = 1.0;
 const matomoSubTotal = 1.0;
 const matomoTaxAmount = 1.0;
-final matomoTrackingOrderItems = [mockTrackingOrderItem];
+final matomoTraOrderItems = [mockTraOrderItem];
 Map<String, String> getWantedEventMap(DateTime now, {String? userAgent}) => {
       "idsite": "1",
       "rec": "1",

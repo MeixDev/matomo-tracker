@@ -30,7 +30,7 @@ void main() {
       shippingCost: matomoShippingCost,
       subTotal: matomoSubTotal,
       taxAmount: matomoTaxAmount,
-      trackingOrderItems: matomoTrackingOrderItems,
+      traOrderItems: matomoTraOrderItems,
     );
   }
 
@@ -57,7 +57,7 @@ void main() {
     expect(matomotoEvent.shippingCost, matomoShippingCost);
     expect(matomotoEvent.subTotal, matomoSubTotal);
     expect(matomotoEvent.taxAmount, matomoTaxAmount);
-    expect(matomotoEvent.trackingOrderItems, matomoTrackingOrderItems);
+    expect(matomotoEvent.traOrderItems, matomoTraOrderItems);
   });
 
   group(
@@ -142,7 +142,7 @@ void main() {
       when(() => mockVisitor.id).thenReturn(visitorId);
       when(() => mockVisitor.forcedId).thenReturn(forceId);
       when(() => mockVisitor.userId).thenReturn(userId);
-      when(mockTrackingOrderItem.toArray).thenReturn([]);
+      when(mockTraOrderItem.toArray).thenReturn([]);
       when(() => mockSession.visitCount).thenReturn(sessionVisitCount);
       when(() => mockSession.lastVisit).thenReturn(sessionLastVisite);
       when(() => mockSession.firstVisit).thenReturn(sessionFirstVisite);

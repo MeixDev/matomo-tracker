@@ -4,7 +4,7 @@ import 'dart:ui';
 
 import 'package:clock/clock.dart';
 import 'package:matomo_tracker/src/matomo.dart';
-import 'package:matomo_tracker/src/tracking_order_item.dart';
+import 'package:matomo_tracker/src/tra_order_item.dart';
 
 class MatomoEvent {
   MatomoEvent({
@@ -18,7 +18,7 @@ class MatomoEvent {
     String? screenId,
     this.goalId,
     this.orderId,
-    this.trackingOrderItems,
+    this.traOrderItems,
     this.revenue,
     this.subTotal,
     this.taxAmount,
@@ -76,7 +76,7 @@ class MatomoEvent {
 
   final int? goalId;
   final String? orderId;
-  final List<TrackingOrderItem>? trackingOrderItems;
+  final List<TraOrderItem>? traOrderItems;
   final num? revenue;
 
   /// Excludes shipping
@@ -118,7 +118,7 @@ class MatomoEvent {
     final eN = eventName;
     final eV = eventValue;
     final ecId = orderId;
-    final ecItems = trackingOrderItems;
+    final ecItems = traOrderItems;
     final ecSt = subTotal;
     final ecTx = taxAmount;
     final ecSh = shippingCost;
@@ -160,7 +160,7 @@ class MatomoEvent {
       if (pvId != null) 'pv_id': pvId,
       if (idgoal != null) 'idgoal': idgoal.toString(),
 
-      // Optional Event Tracking info
+      // Optional Event Tra info
       if (eC != null) 'e_c': eC,
       if (eA != null) 'e_a': eA,
       if (eN != null) 'e_n': eN,

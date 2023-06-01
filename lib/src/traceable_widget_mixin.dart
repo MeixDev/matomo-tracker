@@ -39,10 +39,10 @@ mixin TraceableClientMixin<T extends StatefulWidget> on State<T> {
   @override
   void initState() {
     super.initState();
-    _startTracking();
+    _startTra();
   }
 
-  void _startTracking() {
+  void _startTra() {
     tracker.trackScreenWithName(
       widgetName: traceName,
       eventName: traceTitle,
